@@ -2,5 +2,10 @@
   "import": [
     "peter-jerry-ye/wasip2/internal/ev",
     "peter-jerry-ye/wasip2/internal/wasi/clocks/monotonicClock"
-  ]
+  ],
+  "targets": {
+    "top.mbt": [
+      "wasm-gc"
+    ]
+  }
 }

@@ -2,5 +2,25 @@
   "import": [
     "peter-jerry-ye/wasip2/internal/ev",
     "peter-jerry-ye/wasip2/internal/io_buffer"
-  ]
+  ],
+  "targets": {
+    "buffered_reader.mbt": [
+      "wasm-gc"
+    ],
+    "buffered_writer.mbt": [
+      "wasm-gc"
+    ],
+    "data.mbt": [
+      "wasm-gc"
+    ],
+    "pipe.mbt": [
+      "wasm-gc"
+    ],
+    "reader.mbt": [
+      "wasm-gc"
+    ],
+    "writer.mbt": [
+      "wasm-gc"
+    ]
+  }
 }

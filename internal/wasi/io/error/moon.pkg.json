@@ -1,3 +1,11 @@
 {
-  "warn-list": "-27-44"
+  "warn-list": "-27-44",
+  "targets": {
+    "ffi.mbt": [
+      "wasm-gc"
+    ],
+    "top.mbt": [
+      "wasm-gc"
+    ]
+  }
 }

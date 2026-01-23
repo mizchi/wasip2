@@ -1,7 +1,21 @@
 {
   "warn-list": "-44",
   "import": [
-    { "path" : "peter-jerry-ye/wasip2/internal/wasi/sockets/network", "alias" : "network" },
-    { "path" : "peter-jerry-ye/wasip2/internal/wasi/sockets/tcp", "alias" : "tcp" }
-  ]
+    {
+      "path": "peter-jerry-ye/wasip2/internal/wasi/sockets/network",
+      "alias": "network"
+    },
+    {
+      "path": "peter-jerry-ye/wasip2/internal/wasi/sockets/tcp",
+      "alias": "tcp"
+    }
+  ],
+  "targets": {
+    "ffi.mbt": [
+      "wasm-gc"
+    ],
+    "top.mbt": [
+      "wasm-gc"
+    ]
+  }
 }

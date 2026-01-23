@@ -4,5 +4,10 @@
     "peter-jerry-ye/wasip2/internal/wasi/http/types",
     "peter-jerry-ye/wasip2/internal/wasi/http/outgoingHandler",
     "peter-jerry-ye/wasip2/internal/wasi/io/streams"
-  ]
+  ],
+  "targets": {
+    "http.mbt": [
+      "wasm-gc"
+    ]
+  }
 }

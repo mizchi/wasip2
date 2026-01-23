@@ -15,5 +15,10 @@
       "alias": "wallClock"
     },
     "peter-jerry-ye/wasip2/async"
-  ]
+  ],
+  "targets": {
+    "fs.mbt": [
+      "wasm-gc"
+    ]
+  }
 }

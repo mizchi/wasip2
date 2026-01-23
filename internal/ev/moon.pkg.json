@@ -1,5 +1,19 @@
 {
   "import": [
     "peter-jerry-ye/wasip2/internal/wasi/io/poll"
-  ]
+  ],
+  "targets": {
+    "async_primitive.mbt": [
+      "wasm-gc"
+    ],
+    "coroutine.mbt": [
+      "wasm-gc"
+    ],
+    "ev.mbt": [
+      "wasm-gc"
+    ],
+    "scheduler.mbt": [
+      "wasm-gc"
+    ]
+  }
 }

@@ -6,5 +6,31 @@
     "peter-jerry-ye/wasip2/async/aqueue",
     "peter-jerry-ye/wasip2/internal/wasi/clocks/monotonicClock",
     "moonbitlang/core/cmp"
-  ]
+  ],
+  "targets": {
+    "alias.mbt": [
+      "wasm-gc"
+    ],
+    "all_any.mbt": [
+      "wasm-gc"
+    ],
+    "async.mbt": [
+      "wasm-gc"
+    ],
+    "lazy_init.mbt": [
+      "wasm-gc"
+    ],
+    "retry.mbt": [
+      "wasm-gc"
+    ],
+    "task.mbt": [
+      "wasm-gc"
+    ],
+    "task_group.mbt": [
+      "wasm-gc"
+    ],
+    "with_timeout.mbt": [
+      "wasm-gc"
+    ]
+  }
 }

@@ -6,5 +6,16 @@
     "peter-jerry-ye/wasip2/internal/wasi/cli/stdin",
     "peter-jerry-ye/wasip2/internal/wasi/cli/stdout",
     "peter-jerry-ye/wasip2/internal/wasi/cli/stderr"
-  ]
+  ],
+  "targets": {
+    "stdio.mbt": [
+      "wasm-gc"
+    ],
+    "unimplemented.mbt": [
+      "wasm-gc"
+    ],
+    "unimplemented_test.mbt": [
+      "wasm-gc"
+    ]
+  }
 }

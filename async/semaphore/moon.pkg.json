@@ -1,3 +1,10 @@
 {
-  "import": [ "peter-jerry-ye/wasip2/internal/ev" ]
+  "import": [
+    "peter-jerry-ye/wasip2/internal/ev"
+  ],
+  "targets": {
+    "semaphore.mbt": [
+      "wasm-gc"
+    ]
+  }
 }
