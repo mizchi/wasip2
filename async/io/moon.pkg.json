@@ -1,7 +1,7 @@
 {
   "import": [
-    "peter-jerry-ye/wasip2/internal/ev",
-    "peter-jerry-ye/wasip2/internal/io_buffer"
+    "mizchi/wasip2/internal/ev",
+    "mizchi/wasip2/internal/io_buffer"
   ],
   "targets": {
     "buffered_reader.mbt": [

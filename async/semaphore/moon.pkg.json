@@ -1,6 +1,6 @@
 {
   "import": [
-    "peter-jerry-ye/wasip2/internal/ev"
+    "mizchi/wasip2/internal/ev"
   ],
   "targets": {
     "semaphore.mbt": [

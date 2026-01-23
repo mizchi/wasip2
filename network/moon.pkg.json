@@ -1,15 +1,15 @@
 {
   "import": [
-    "peter-jerry-ye/wasip2/internal/ev",
+    "mizchi/wasip2/internal/ev",
     {
-      "path": "peter-jerry-ye/wasip2/wasi/sockets/network",
+      "path": "mizchi/wasip2/wasi/sockets/network",
       "alias": "wasiNetwork"
     },
-    "peter-jerry-ye/wasip2/wasi/sockets/tcp",
-    "peter-jerry-ye/wasip2/wasi/sockets/tcpCreateSocket",
-    "peter-jerry-ye/wasip2/wasi/sockets/instanceNetwork",
-    "peter-jerry-ye/wasip2/wasi/sockets/ipNameLookup",
-    "peter-jerry-ye/wasip2/wasi/io/streams"
+    "mizchi/wasip2/wasi/sockets/tcp",
+    "mizchi/wasip2/wasi/sockets/tcpCreateSocket",
+    "mizchi/wasip2/wasi/sockets/instanceNetwork",
+    "mizchi/wasip2/wasi/sockets/ipNameLookup",
+    "mizchi/wasip2/wasi/io/streams"
   ],
   "targets": {
     "socket.mbt": [

@@ -11,14 +11,14 @@
     }
   },
   "import": [
-    "peter-jerry-ye/wasip2",
-    "peter-jerry-ye/wasip2/stdio",
-    "peter-jerry-ye/wasip2/async",
-    "peter-jerry-ye/wasip2/async/cond_var",
-    "peter-jerry-ye/wasip2/async/aqueue",
-    "peter-jerry-ye/wasip2/async/io",
-    "peter-jerry-ye/wasip2/http",
-    "peter-jerry-ye/wasip2/fs"
+    "mizchi/wasip2",
+    "mizchi/wasip2/stdio",
+    "mizchi/wasip2/async",
+    "mizchi/wasip2/async/cond_var",
+    "mizchi/wasip2/async/aqueue",
+    "mizchi/wasip2/async/io",
+    "mizchi/wasip2/http",
+    "mizchi/wasip2/fs"
   ],
   "targets": {
     "ffi.mbt": [

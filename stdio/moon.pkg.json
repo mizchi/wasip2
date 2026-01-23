@@ -1,11 +1,11 @@
 {
   "import": [
-    "peter-jerry-ye/wasip2/internal/ev",
-    "peter-jerry-ye/wasip2/async/io",
-    "peter-jerry-ye/wasip2/wasi/io/streams",
-    "peter-jerry-ye/wasip2/wasi/cli/stdin",
-    "peter-jerry-ye/wasip2/wasi/cli/stdout",
-    "peter-jerry-ye/wasip2/wasi/cli/stderr"
+    "mizchi/wasip2/internal/ev",
+    "mizchi/wasip2/async/io",
+    "mizchi/wasip2/wasi/io/streams",
+    "mizchi/wasip2/wasi/cli/stdin",
+    "mizchi/wasip2/wasi/cli/stdout",
+    "mizchi/wasip2/wasi/cli/stderr"
   ],
   "targets": {
     "stdio.mbt": [

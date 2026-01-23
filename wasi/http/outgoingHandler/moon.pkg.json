@@ -2,7 +2,7 @@
   "warn-list": "-44",
   "import": [
     {
-      "path": "peter-jerry-ye/wasip2/wasi/http/types",
+      "path": "mizchi/wasip2/wasi/http/types",
       "alias": "types"
     }
   ],
