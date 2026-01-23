@@ -1,9 +1,9 @@
 {
   "import": [
     "peter-jerry-ye/wasip2/internal/ev",
-    "peter-jerry-ye/wasip2/internal/wasi/http/types",
-    "peter-jerry-ye/wasip2/internal/wasi/http/outgoingHandler",
-    "peter-jerry-ye/wasip2/internal/wasi/io/streams"
+    "peter-jerry-ye/wasip2/wasi/http/types",
+    "peter-jerry-ye/wasip2/wasi/http/outgoingHandler",
+    "peter-jerry-ye/wasip2/wasi/io/streams"
   ],
   "targets": {
     "http.mbt": [

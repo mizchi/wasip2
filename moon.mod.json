@@ -1,4 +1,5 @@
 {
   "name": "peter-jerry-ye/wasip2",
-  "preferred-target": "wasm"
+  "version": "0.1.0",
+  "preferred-target": "wasm-gc"
 }

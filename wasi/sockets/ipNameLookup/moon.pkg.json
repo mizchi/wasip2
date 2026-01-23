@@ -1,0 +1,21 @@
+{
+  "warn-list": "-44",
+  "import": [
+    {
+      "path": "peter-jerry-ye/wasip2/wasi/io/poll",
+      "alias": "poll"
+    },
+    {
+      "path": "peter-jerry-ye/wasip2/wasi/sockets/network",
+      "alias": "network"
+    }
+  ],
+  "targets": {
+    "ffi.mbt": [
+      "wasm-gc"
+    ],
+    "top.mbt": [
+      "wasm-gc"
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 {
   "import": [
-    "peter-jerry-ye/wasip2/internal/wasi/io/poll"
+    "peter-jerry-ye/wasip2/wasi/io/poll"
   ],
   "targets": {
     "async_primitive.mbt": [

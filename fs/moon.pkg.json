@@ -3,15 +3,15 @@
     "peter-jerry-ye/wasip2/async/io",
     "peter-jerry-ye/wasip2/async/semaphore",
     {
-      "path": "peter-jerry-ye/wasip2/internal/wasi/filesystem/types",
+      "path": "peter-jerry-ye/wasip2/wasi/filesystem/types",
       "alias": "types"
     },
     {
-      "path": "peter-jerry-ye/wasip2/internal/wasi/filesystem/preopens",
+      "path": "peter-jerry-ye/wasip2/wasi/filesystem/preopens",
       "alias": "preopens"
     },
     {
-      "path": "peter-jerry-ye/wasip2/internal/wasi/clocks/wallClock",
+      "path": "peter-jerry-ye/wasip2/wasi/clocks/wallClock",
       "alias": "wallClock"
     },
     "peter-jerry-ye/wasip2/async"

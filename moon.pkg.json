@@ -1,7 +1,7 @@
 {
   "import": [
     "peter-jerry-ye/wasip2/internal/ev",
-    "peter-jerry-ye/wasip2/internal/wasi/clocks/monotonicClock"
+    "peter-jerry-ye/wasip2/wasi/clocks/monotonicClock"
   ],
   "targets": {
     "top.mbt": [

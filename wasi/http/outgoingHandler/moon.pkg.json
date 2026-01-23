@@ -1,0 +1,17 @@
+{
+  "warn-list": "-44",
+  "import": [
+    {
+      "path": "peter-jerry-ye/wasip2/wasi/http/types",
+      "alias": "types"
+    }
+  ],
+  "targets": {
+    "ffi.mbt": [
+      "wasm-gc"
+    ],
+    "top.mbt": [
+      "wasm-gc"
+    ]
+  }
+}
