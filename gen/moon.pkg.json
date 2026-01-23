@@ -16,7 +16,16 @@
     "peter-jerry-ye/wasip2/async",
     "peter-jerry-ye/wasip2/async/cond_var",
     "peter-jerry-ye/wasip2/async/aqueue",
+    "peter-jerry-ye/wasip2/async/io",
     "peter-jerry-ye/wasip2/http",
     "peter-jerry-ye/wasip2/fs"
-  ]
+  ],
+  "targets": {
+    "ffi.mbt": [
+      "wasm-gc"
+    ],
+    "stub.mbt": [
+      "wasm-gc"
+    ]
+  }
 }

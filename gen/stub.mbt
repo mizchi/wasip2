@@ -8,6 +8,11 @@ pub fn run() -> Result[Unit, Unit] {
 
 ///|
 pub async fn async_run() -> Unit {
+  // FS Demo - ファイルシステム操作のサンプル
+  demo_fs()
+
+  @stdio.stdout.write("\n--- Running tests ---\n\n")
+
   // CondVar tests
   test_cond_var_cancellation_no_swallow()
   test_cond_var_fairness()
@@ -43,6 +48,78 @@ pub async fn async_run() -> Unit {
   // FS tests
   test_fs_write_read_remove()
   @stdio.stdout.write("All tests passed!\n")
+}
+
+///|
+/// FS Demo - WASM でファイルシステムを操作するサンプル
+async fn demo_fs() -> Unit {
+  @stdio.stdout.write("=== WASM FS Demo ===\n\n")
+
+  // 1. ファイルの書き込み
+  @stdio.stdout.write("1. Writing file...\n")
+  let path = "/tmp/wasm_demo.txt"
+  let content = "Hello from MoonBit WASM!\nThis is a test file.\n日本語も書けます。\n"
+  @fs.write_file(path, content, create=true, truncate=true)
+  @stdio.stdout.write("   Written to: " + path + "\n")
+
+  // 2. ファイルの読み込み
+  @stdio.stdout.write("\n2. Reading file...\n")
+  let data = @fs.read_file(path)
+  @stdio.stdout.write("   Content:\n")
+  @stdio.stdout.write("   ---\n")
+  let content_str = data.text()
+  for line in content_str.split("\n") {
+    @stdio.stdout.write("   " + line.to_string() + "\n")
+  }
+  @stdio.stdout.write("   ---\n")
+
+  // 3. ファイル情報の取得
+  @stdio.stdout.write("\n3. File info...\n")
+  match @fs.stat(path) {
+    Some(s) => {
+      @stdio.stdout.write("   Size: " + s.size.to_string() + " bytes\n")
+      @stdio.stdout.write("   Kind: " + s.kind.to_string() + "\n")
+    }
+    None => @stdio.stdout.write("   Could not get stat\n")
+  }
+
+  // 4. ディレクトリ作成
+  @stdio.stdout.write("\n4. Creating directory...\n")
+  let dir_path = "/tmp/wasm_demo_dir"
+  try {
+    @fs.mkdir(dir_path, permission=0o755)
+    @stdio.stdout.write("   Created: " + dir_path + "\n")
+  } catch {
+    _ => @stdio.stdout.write("   Directory already exists\n")
+  }
+
+  // 5. ディレクトリ内にファイル作成
+  @stdio.stdout.write("\n5. Creating files in directory...\n")
+  @fs.write_file(dir_path + "/file1.txt", "File 1 content", create=true, truncate=true)
+  @fs.write_file(dir_path + "/file2.txt", "File 2 content", create=true, truncate=true)
+  @fs.write_file(dir_path + "/file3.txt", "File 3 content", create=true, truncate=true)
+  @stdio.stdout.write("   Created 3 files\n")
+
+  // 6. ディレクトリの読み込み
+  @stdio.stdout.write("\n6. Listing directory...\n")
+  let entries = @fs.readdir(dir_path)
+  for entry in entries {
+    @stdio.stdout.write("   - " + entry + "\n")
+  }
+
+  // 7. ファイルの存在確認
+  @stdio.stdout.write("\n7. Checking file existence...\n")
+  @stdio.stdout.write("   " + path + " exists: " + @fs.exists(path).to_string() + "\n")
+  @stdio.stdout.write("   /tmp/nonexistent.txt exists: " + @fs.exists("/tmp/nonexistent.txt").to_string() + "\n")
+
+  // 8. クリーンアップ
+  @stdio.stdout.write("\n8. Cleanup...\n")
+  @fs.remove(path)
+  @stdio.stdout.write("   Removed: " + path + "\n")
+  @fs.rmdir(dir_path, recursive=true)
+  @stdio.stdout.write("   Removed: " + dir_path + "\n")
+
+  @stdio.stdout.write("\n=== Demo completed! ===\n")
 }
 
 ///|
