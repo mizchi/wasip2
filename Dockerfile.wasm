@@ -1,0 +1,21 @@
+# WASM OCI Image for wasip2 sandbox
+#
+# This Dockerfile creates a minimal OCI image containing the WASM component.
+# It can be run using wasmtime, runwasi, or other WASM-compatible OCI runtimes.
+#
+# Build:
+#   docker buildx build --platform wasi/wasm32 -f Dockerfile.wasm -t wasip2-sandbox:latest .
+#
+# Run with wasmtime:
+#   wasmtime run --dir /tmp:/sandbox target/cli.wasm
+#
+# Run with Docker (requires runwasi):
+#   docker run --runtime=io.containerd.wasmtime.v1 --platform wasi/wasm32 wasip2-sandbox:latest
+
+FROM scratch
+
+# Copy the WASM component
+COPY target/cli.wasm /app.wasm
+
+# Set the entrypoint
+ENTRYPOINT ["/app.wasm"]

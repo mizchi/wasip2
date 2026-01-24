@@ -1,0 +1,38 @@
+{
+  "allowed_paths": [
+    {
+      "guest": "/sandbox",
+      "host": "/tmp/sandbox",
+      "read_only": false
+    },
+    {
+      "guest": "/home",
+      "host": "/tmp/home",
+      "read_only": false
+    },
+    {
+      "guest": "/readonly",
+      "host": "/etc",
+      "read_only": true
+    }
+  ],
+  "denied_paths": [
+    "/etc/shadow",
+    "/etc/passwd"
+  ],
+  "allow_network": false,
+  "allowed_hosts": [],
+  "allowed_ports": [],
+  "env": [
+    ["HOME", "/home"],
+    ["PATH", "/bin:/usr/bin"],
+    ["USER", "sandbox"],
+    ["SANDBOX_MODE", "true"]
+  ],
+  "env_whitelist": null,
+  "max_memory_bytes": 268435456,
+  "max_exec_time_ms": 60000,
+  "max_file_size": 10485760,
+  "max_total_size": 104857600,
+  "max_open_files": 64
+}
